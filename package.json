@@ -1,7 +1,7 @@
 {
   "name": "iopa-bot-console",
   "main": "index.js",
-  "description": "API-First Bot Framework for Internet of Things (IoT), based on Internet of Protocols Alliance (IOPA) specification",
+  "description": "Console Bot Connector for IOPA Bot Framework",
   "author": "iopa <build@iopa.io>",
   "license": "Apache-2.0",
   "maintainers": [
@@ -10,7 +10,7 @@
       "email": "build@iopa.io"
     }
   ],
-  "version": "1.4.0",
+  "version": "1.4.1",
   "repository": {
     "type": "git",
     "url": "https://github.com/iopa-io/iopa-bot-console.git"
