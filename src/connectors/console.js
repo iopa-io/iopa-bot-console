@@ -30,7 +30,7 @@ var readline = require('readline').createInterface({
 
 var env = {
   user: {
-    name: "Demo"
+    name: "local"
   }
 }
 
