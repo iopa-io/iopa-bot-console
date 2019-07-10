@@ -1,6 +1,7 @@
 {
   "name": "iopa-bot-console",
-  "main": "index.js",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "description": "Console Bot Connector for IOPA Bot Framework",
   "author": "iopa <build@iopa.io>",
   "license": "Apache-2.0",
@@ -10,16 +11,13 @@
       "email": "build@iopa.io"
     }
   ],
-  "version": "1.4.2",
+  "version": "2.0.0",
   "repository": {
     "type": "git",
     "url": "https://github.com/iopa-io/iopa-bot-console.git"
   },
   "dependencies": {
-    "iopa": "^1.4.0"
-  },  
-  "peerDependencies": {
-    "iopa-bot": "^1.4.0"
+    "iopa": "^2.0.0"
   },
   "keywords": [
     "iopa",
@@ -33,21 +31,13 @@
     "conversational agent"
   ],
   "engines": {
-    "node": ">= 4.0"
+    "node": ">= 8.0"
   },
   "scripts": {
-    "test": "mocha --reporter spec test",
-    "quick": "git add . -A && git commit -m 'dev test' && npm version patch && npm publish",
-    "typings": "tsd reinstall --overwrite --clean --config tools/tsd.json && tsd link"
+    "build": "rm -rf ./dist && tsc",
+    "lint": "berun-scripts lint"
   },
   "devDependencies": {
-    "iopa-bot": "^1.4.0"
   },
-  "devDependencies_unused": {
-    "mocha": "^2.3.2",
-    "mocha-junit-reporter": "^1.6.1",
-    "should": "^7.1.0"
-  },
-  "readmeFilename": "README.md",
   "homepage": "http://iopa.io"
 }

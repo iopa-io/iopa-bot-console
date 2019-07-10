@@ -11,41 +11,45 @@ This repository contains a connector the for terminal console for the IOPA Bot F
 
 It is typically used only in localhost testing.
 
-
 ## Example Usage
 
 ```js
 const iopaBotFramework = require('iopa-bot'),
-      iopa = require('iopa'),
-      BOT = iopaBotFramework.constants.BOT;
+  iopa = require('iopa'),
+  BOT = iopaBotFramework.constants.BOT
 
-require('iopa-bot-console');
+require('iopa-bot-console')
 
-var app = new iopa.App();
+var app = new iopa.App()
 
-app.use(iopaBotFramework.connectors.console);
-app.use(iopaBotFramework);
+app.use(iopaBotFramework.connectors.console)
+app.use(iopaBotFramework)
 
 // conversation schema -- change to program your bot
 
-app.intent(BOT.INTENTS.Launch, { "utterances": ['/launch', '/open'] })
+app.intent(BOT.INTENTS.Launch, { utterances: ['/launch', '/open'] })
 
 app.dialog('/', [BOT.INTENTS.Launch], function(context, next) {
-    context.response.say("Hello!  Please converse with this bot. ").send();
-});
+  context.response.say('Hello!  Please converse with this bot. ').send()
+})
 
-app.intent('helloIntent', { "utterances": ['hi', 'hello', 'hey'] }, function(context, next) {
-     context.response.say("Hello World").send();
+app.intent('helloIntent', { utterances: ['hi', 'hello', 'hey'] }, function(
+  context,
+  next
+) {
+  context.response.say('Hello World').send()
 })
 
 app.dialog('/unknown', '*', function(context, next) {
-    context.response.say("I don't know what you mean by " + context[BOT.Text]).send();
-});
+  context.response
+    .say("I don't know what you mean by " + context[BOT.Text])
+    .send()
+})
 
 // build and listen to console
 
-app.build();
-app.listen();
+app.build()
+app.listen()
 ```
 
 ## License
@@ -55,4 +59,3 @@ Apache-2.0
 ## API Reference Specification
 
 [![IOPA](http://iopa.io/iopa.png)](http://iopa.io)
- 
