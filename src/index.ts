@@ -1,6 +1,6 @@
 /*
- * Internet Open Protocol Abstraction (IOPA)
- * Copyright (c) 2016 Internet of Protocols Alliance 
+ * Iopa Bot Framework
+ * Copyright (c) 2016 Internet of Protocols Alliance
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -15,29 +15,4 @@
  * limitations under the License.
  */
 
-/**
- * Create a new guid
- *
- * @method guid
- * @returns guid (string)
- * @private
- */
-function guid() {
-    return s4() + s4() + '-' + s4() + '-' + s4() + '-' +
-    s4() + '-' + s4() + s4() + s4();
-}
-
-/**
- * Create a new 4 character ID (random)
- *
- * @method s4
- * @returns (string)
- * @private
- */
-function s4() {
-    return Math.floor((1 + Math.random()) * 0x10000)
-    .toString(16)
-    .substring(1);
-};
-
-exports.default = guid;
+export { default, AppConsoleExtensions } from './connectors/console'
