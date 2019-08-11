@@ -17,7 +17,8 @@
     "url": "https://github.com/iopa-io/iopa-bot-console.git"
   },
   "dependencies": {
-    "iopa": "^2.0.0"
+    "iopa": "^2.0.0",
+    "iopa-bot": "^2.0.2"
   },
   "keywords": [
     "iopa",
