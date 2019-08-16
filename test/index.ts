@@ -19,10 +19,12 @@ import iopaBotFramework, { BOT, AppBotExtensions } from 'iopa-bot'
 import * as iopa from 'iopa'
 
 import iopaBotConnectorConsole, { AppConsoleExtensions } from '../src/index'
+import { default as memorySessionDbMiddleware } from '../src/db/memorySession'
 
 interface App extends iopa.App, AppBotExtensions, AppConsoleExtensions {}
 
 const app = (new iopa.App() as any) as App
+app.use(memorySessionDbMiddleware)
 app.use(iopaBotConnectorConsole)
 app.use(iopaBotFramework)
 

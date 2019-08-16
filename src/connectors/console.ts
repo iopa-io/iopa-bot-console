@@ -19,7 +19,6 @@ import { constants } from 'iopa'
 const { IOPA, SERVER } = constants
 import { BOT } from 'iopa-bot'
 
-import { default as memorySessionDbMiddleware } from '../db/memorySession'
 import { asyncForEach } from 'iopa-bot/dist/util/forEachAsync'
 
 export interface AppConsoleExtensions {
@@ -40,7 +39,6 @@ var env = {
 export default class ConsoleBot {
   constructor(app) {
     app.use(this.invoke_)
-    app.use(memorySessionDbMiddleware)
 
     app.listen = function() {
       readline.on('line', function(input) {
@@ -86,11 +84,12 @@ export default class ConsoleBot {
   }
 }
 
-class IopaConsole {
+export class IopaConsole {
   private response: IopaConsoleResponse
   private log: any
 
   constructor(_console, req) {
+    
     this[IOPA.Body] = req
     this[IOPA.RawBody] = req
     this[IOPA.Headers] = []

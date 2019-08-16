@@ -15,4 +15,4 @@
  * limitations under the License.
  */
 
-export { default, AppConsoleExtensions } from './connectors/console'
+export { default, AppConsoleExtensions, IopaConsole } from './connectors/console'

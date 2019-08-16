@@ -5,7 +5,7 @@
     "outDir": "dist",
     "rootDir": "src",
     "types": ["@types/node"],
-    "lib": ["esnext", "dom"],
+    "lib": ["esnext"],
     "sourceMap": false,
     "declaration": true,
     "allowJs": false,
