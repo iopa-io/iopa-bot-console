@@ -11,7 +11,7 @@
       "email": "build@iopa.io"
     }
   ],
-  "version": "2.0.0",
+  "version": "2.0.1",
   "repository": {
     "type": "git",
     "url": "https://github.com/iopa-io/iopa-bot-console.git"
@@ -38,7 +38,6 @@
     "build": "rm -rf ./dist && tsc",
     "lint": "berun-scripts lint"
   },
-  "devDependencies": {
-  },
+  "devDependencies": {},
   "homepage": "http://iopa.io"
 }
